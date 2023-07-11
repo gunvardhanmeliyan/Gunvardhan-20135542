@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Library {
 	private ArrayList<Book> bookList=new ArrayList<Book>();
@@ -35,7 +36,7 @@ public class Library {
          while(iter.hasNext())
          {
              Book b=(Book)iter.next();
-             if(b.getBookName().equalsIgnoreCase(bname))
+             if(b.getBookname().equalsIgnoreCase(bname))
              count++;
          }
          return count;
