@@ -1,0 +1,84 @@
+
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class StudentRegister
+ */
+public class StudentRegister extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+    /**
+     * Default constructor. 
+     */
+    public StudentRegister() {
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		
+		int sid=Integer.parseInt(request.getParameter("uid"));
+		String sname=request.getParameter("uname");
+		int sphone=Integer.parseInt(request.getParameter("uphone"));
+		int smarks=Integer.parseInt(request.getParameter("umarks"));
+		String sbranch=request.getParameter("ubranch");
+		
+
+		PrintWriter out=response.getWriter();
+		try {
+		
+Class.forName("com.mysql.jdbc.Driver");
+Connection con= DriverManager.getConnection("jdbc:mysql://localhost:3306/igtexamq2","root", "groot");
+PreparedStatement pstmt=con.prepareStatement("insert into student values(?,?,?,?,?)");
+pstmt.setInt(1, sid);
+pstmt.setString(2, sname);
+pstmt.setInt(3, sphone);
+pstmt.setInt(4, smarks);
+pstmt.setString(5, sbranch);
+pstmt.execute();
+
+		
+		out.print("<h1>");
+		out.print("SID: "+sid);
+		out.print("<br>");
+		out.print("SName: "+sname);
+		out.print("<br>");
+		out.print("Phone: "+sphone);
+		out.print("<br>");
+		out.print("Marks: "+smarks);
+		out.print("<br>");
+		out.print("Branch: "+sbranch);
+		out.print("<br>");
+		out.print("Congrats you are successfully registered");
+		out.print("<br>");
+		out.print("</h1>");
+		}
+		catch(Exception e) {
+			System.out.println(e);
+		}
+		
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+
+}

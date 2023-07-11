@@ -1,0 +1,17 @@
+127.0.0.1 - - [11/Jul/2023:11:23:33 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [11/Jul/2023:11:23:34 +0530] "GET /Q2/index.html HTTP/1.1" 200 1132
+0:0:0:0:0:0:0:1 - - [11/Jul/2023:11:23:34 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+0:0:0:0:0:0:0:1 - - [11/Jul/2023:11:24:09 +0530] "GET /Q2/StudentRegister?uid=1&uname=gunvardhan&uphone=12345&umarks=87&ubranch=CSE HTTP/1.1" 200 14
+0:0:0:0:0:0:0:1 - - [11/Jul/2023:11:25:17 +0530] "GET /Q2/index.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [11/Jul/2023:11:25:26 +0530] "GET /Q2/StudentRegister?uid=1&uname=gunvardhan&uphone=12345&umarks=87&ubranch=CSE HTTP/1.1" 200 134
+0:0:0:0:0:0:0:1 - - [11/Jul/2023:11:26:02 +0530] "GET /Q2/index.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [11/Jul/2023:11:26:33 +0530] "GET /Q2/StudentRegister?uid=2&uname=thanesh&uphone=67890&umarks=90&ubranch=CSE HTTP/1.1" 200 131
+0:0:0:0:0:0:0:1 - - [11/Jul/2023:11:27:06 +0530] "GET /Q2/index.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [11/Jul/2023:11:27:27 +0530] "GET /Q2/StudentRegister?uid=3&uname=rajesh&uphone=57932&umarks=76&ubranch=it HTTP/1.1" 200 139
+127.0.0.1 - - [11/Jul/2023:11:28:15 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [11/Jul/2023:11:28:16 +0530] "GET /Q2/index.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [11/Jul/2023:11:28:43 +0530] "GET /Q2/StudentRegister?uid=4&uname=puneet&uphone=357901&umarks=67&ubranch=ece HTTP/1.1" 200 141
+127.0.0.1 - - [11/Jul/2023:12:02:46 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [11/Jul/2023:12:02:47 +0530] "GET /Q3/index.html HTTP/1.1" 200 416
+0:0:0:0:0:0:0:1 - - [11/Jul/2023:12:02:47 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+0:0:0:0:0:0:0:1 - - [11/Jul/2023:12:03:08 +0530] "GET /Q3/Calculator.jsp?epamount=75000&erate=6&etime=12 HTTP/1.1" 200 182
